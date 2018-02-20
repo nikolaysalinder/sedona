@@ -9,7 +9,7 @@
       src="./../assets/index-decor.png"
       class="welcome-decor">
     </section>
-    <section class="title">
+    <section class="index-title">
       <h1>Седона небольшой</h1>
       <p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
     </section>
@@ -106,15 +106,17 @@ export default {
 <style>
 .welcome {
   background: url('./../assets/top-bg.png');
-  background-position: 51% 29%;
+  background-position: 50% 29%;
   background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
   position: relative;
-  height: 509px;
+  max-width: 100%;
+  overflow: hidden;
 }
 .welcome-text {
-  position: absolute;
-  top: 15%;
-  left: 31%;
+  display: block;
+  margin: 76px auto;
 }
 .welcome-decor {
   position: absolute;

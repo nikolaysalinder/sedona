@@ -61,7 +61,7 @@ export default {
   position: absolute;
   left: center;
   margin-left: -29%;
-  min-width: 140px;
+  min-width: 100%;
   top: -10px;
   height: 70px;
   background: url('./../assets/top-logo.png');

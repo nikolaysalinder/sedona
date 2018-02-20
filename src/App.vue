@@ -21,17 +21,17 @@ export default {
 --brown: #766357;
 --gray: #666666;*/
 /*стили для разработки*/
-a, div, li, nav, ul, header,
+/*a, div, li, nav, ul, header,
 footer, figure, form,
 label, h1, h2 {
   outline: 1px solid green;
-}
+}*/
+/*стили для разработки*/
 body {
   margin: 0;
   padding: 0;
   background: #f2f2f2;
 }
-/*стили для разработки*/
 #app {
   font-family: 'Pt Sans', 'Gerogia', serif;
   font-weight: 700;
@@ -39,5 +39,6 @@ body {
   margin: 0 auto;
   padding: 0;
   background-color: #fefefe;
+  box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.5);
 }
 </style>
