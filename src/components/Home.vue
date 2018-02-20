@@ -105,7 +105,6 @@ export default {
 
 <style>
 .welcome {
-  background: url('./../assets/top-bg.png');
   background-position: 50% 29%;
   background-repeat: no-repeat;
   margin: 0;
