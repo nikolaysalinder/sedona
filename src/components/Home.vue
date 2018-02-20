@@ -10,7 +10,7 @@
       class="welcome-decor">
     </section>
     <section class="index-title">
-      <h1>Седона небольшой</h1>
+      <h1>Седона &#8211; небольшой городок в аризоне, заслуживающий большего!</h1>
       <p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
     </section>
     <section class="first-feature">
@@ -105,7 +105,7 @@ export default {
 
 <style>
 .welcome {
-  background: url('./../assets/top-bg.png');
+  background: url('/static/top-bg.png');
   background-position: 50% 29%;
   background-repeat: no-repeat;
   margin: 0;
