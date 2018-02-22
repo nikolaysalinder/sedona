@@ -11,6 +11,11 @@
           exact>
           <a>
             {{ link.text }}
+            <img
+            v-if="link.logo"
+            src="./../assets/top-logo.png"
+            height="70"
+            width="138" alt="Главная">
           </a>
         </router-link>
       </ul>
@@ -25,11 +30,13 @@ export default {
       links: [
         { path: '1', text: 'Информация' },
         { path: '2', text: 'Фото и Видео' },
-        { path: '/', text: 'Главная' },
+        { path: '/', text: 'Главная', imgSrc: '/static/img/top-logo.png', logo: 'true' },
         { path: '4', text: 'Карта штата' },
         { path: '5', text: 'Гостиницы' },
       ],
     };
+  },
+  computed: {
   },
 };
 </script>
@@ -55,19 +62,20 @@ export default {
   color: #000;
 }
 .main-nav-item:nth-child(3) {
+  margin: 0;
+  padding: 0;
   position: relative;
+  font-size: 0;
 }
 .main-nav-item:nth-child(3) a {
   position: absolute;
-  left: center;
-  margin-left: -29%;
-  min-width: 100%;
-  top: -10px;
-  height: 70px;
-  background: url('./../assets/top-logo.png');
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  font-size: 0;
   z-index: 1;
+  left: 0;
+  right: 0;
+  top: -29px;
+}
+.main-nav-item:nth-child(3) a img{
+  width: 138px;
+  height: auto;
 }
 </style>
