@@ -245,5 +245,8 @@ export default {
 }
 #map {
   background: #f3f3f3;
+  margin: 0;
+  padding: 0;
+  height: 470px;
 }
 </style>

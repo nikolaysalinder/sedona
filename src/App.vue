@@ -23,7 +23,7 @@ export default {
 /*стили для разработки*/
 /*a, div, li, nav, ul, header,
 footer, figure, form,
-label, h1, h2, p, fieldset{
+label, h1, h2, p, fieldset, button, input {
   outline: 1px solid green;
 }*/
 /*стили для разработки*/
