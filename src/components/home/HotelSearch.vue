@@ -29,7 +29,7 @@
               <input
               id="adult"
               type="text"
-              value="2">
+              v-model="adultCounter">
               <button
               class="icon-plus">Уменьшить количество взрослых</button>
             </div>
@@ -43,7 +43,7 @@
               <input
               id="child"
               type="text"
-              value="0">
+              v-model="childCounter">
               <button
               class="icon-plus">Уменьшить количество детей</button>
             </div>
@@ -62,6 +62,8 @@
 export default {
   data() {
     return {
+      adultCounter: '2',
+      childCounter: '0',
     };
   },
 };
@@ -156,12 +158,12 @@ li.child-counter label {
   border: 0;
 }
 .counters .icon-minus {
-  background: #f3f3f2 url('./../assets/minus.png');
+  background: #f3f3f2 url('./../../assets/minus.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .counters .icon-plus {
-  background: #f3f3f2 url('./../assets/plus.png');
+  background: #f3f3f2 url('./../../assets/plus.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }

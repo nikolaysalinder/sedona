@@ -3,10 +3,10 @@
     <section class="welcome">
       <img
       class="welcome-text"
-      src="./../assets/welcome.png"
+      src="./../../assets/welcome.png"
       alt="Welcome to the gorgeous Sedona Because the Grand Canyon sucks">
       <img
-      src="./../assets/index-decor.png"
+      src="./../../assets/index-decor.png"
       class="welcome-decor">
     </section>
     <section class="page-title">
@@ -21,27 +21,27 @@
         там течет своя жизнь</p>
       </div>
       <div class="feature-img-mask">
-          <img src="./../assets/flag.jpg" alt="Вид на город">
+          <img src="./../../assets/flag.jpg" alt="Вид на город">
       </div>
     </section>
     <section class="advantages">
       <div class="advantage">
         <img
-        src="./../assets/icon-home.png"
+        src="./../../assets/icon-home.png"
         alt="Лучшие отели">
         <h2 class="advantege-title">Жилье</h2>
         <p>Рекомендуем пожить в настоящем <br>мотеле, все как в кино!</p>
       </div>
       <div class="advantage">
         <img
-        src="./../assets/icon-burger.png"
+        src="./../../assets/icon-burger.png"
         alt="Вкуснейшая еда">
         <h2 class="advantage-title">Еда</h2>
         <p>Всегда заказывайте фирменный бургер, <br> вы не разочаруетесь</p>
       </div>
       <div class="advantage">
         <img
-        src="./../assets/icon-gift.png"
+        src="./../../assets/icon-gift.png"
         alt="Красивые сувениры">
         <h2 class="advantage-title">Сувениры</h2>
         <p>Не только китайского, но и местного<br> производства!</p>
@@ -49,7 +49,7 @@
     </section>
     <section class="second-feature">
       <div class="feature-img-mask">
-        <img src="./../assets/index-second.jpg" alt="Мост дьявола">
+        <img src="./../../assets/index-second.jpg" alt="Мост дьявола">
       </div>
       <div class="feature-item">
         <h2>Там есть<br> мост дьявола</h2>

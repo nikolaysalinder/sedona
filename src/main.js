@@ -5,8 +5,8 @@ import App from './App';
 import router from './router';
 
 import Header from './components/Header';
-import Home from './components/Home';
-import HotelSearch from './components/HotelSearch';
+import Home from './components/home/Home';
+import HotelSearch from './components/home/HotelSearch';
 import Footer from './components/Footer';
 
 Vue.component('app-header', Header);
