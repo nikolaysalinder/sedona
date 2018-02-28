@@ -25,12 +25,14 @@
             <label for="adult">Взрослые:</label>
             <div class="adult-input-wrapper">
               <button
+              @click.prevent="adultCounter -= 1"
               class="icon-minus">Увеличить количество взрослых</button>
               <input
               id="adult"
               type="text"
               v-model="adultCounter">
               <button
+              @click.prevent="adultCounter += 1"
               class="icon-plus">Уменьшить количество взрослых</button>
             </div>
           </li>
@@ -39,12 +41,14 @@
             for="child">Дети:</label>
             <div class="child-input-wrapper">
               <button
+              @click.prevent="childCounter -= 1"
               class="icon-minus">Увеличить количество детей</button>
               <input
               id="child"
               type="text"
               v-model="childCounter">
               <button
+              @click.prevent="childCounter += 1"
               class="icon-plus">Уменьшить количество детей</button>
             </div>
           </li>
@@ -62,8 +66,8 @@
 export default {
   data() {
     return {
-      adultCounter: '2',
-      childCounter: '0',
+      adultCounter: 2,
+      childCounter: 0,
     };
   },
 };
@@ -78,6 +82,10 @@ export default {
   font-size: 0.88em;
   height: 60%;
   background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -23.5%;
 }
 .search-form ul,
 .search-form li {
@@ -144,7 +152,7 @@ li.child-counter label {
 .counters input {
   height: 100%;
   width: 33.33333%;
-  padding-left: 6%;
+  padding-left: 12%;
   box-sizing: border-box;
   margin: 0;
 }

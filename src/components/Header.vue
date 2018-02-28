@@ -32,11 +32,9 @@ export default {
         { path: '2', text: 'Фото и Видео' },
         { path: '/', text: 'Главная', imgSrc: '/static/img/top-logo.png', logo: 'true' },
         { path: '4', text: 'Карта штата' },
-        { path: '5', text: 'Гостиницы' },
+        { path: '/hotels', text: 'Гостиницы' },
       ],
     };
-  },
-  computed: {
   },
 };
 </script>

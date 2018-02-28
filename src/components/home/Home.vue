@@ -84,6 +84,11 @@
     </section>
     <section id="map">
       <app-hotel-search></app-hotel-search>
+       <iframe
+       src="https://www.google.com/maps/d/embed?mid=1p3W-lXoyOQ-YCfSjx7yuiubBbtpIn6LS"
+       width="100%"
+       height="100%">
+       </iframe>
     </section>
   </div>
 </template>
@@ -248,5 +253,10 @@ export default {
   margin: 0;
   padding: 0;
   height: 470px;
+  border: 0;
+  position: relative;
+}
+#map iframe {
+  border: none;
 }
 </style>
