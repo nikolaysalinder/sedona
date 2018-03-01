@@ -84,11 +84,7 @@
     </section>
     <section id="map">
       <app-hotel-search></app-hotel-search>
-       <iframe
-       src="https://www.google.com/maps/d/embed?mid=1p3W-lXoyOQ-YCfSjx7yuiubBbtpIn6LS"
-       width="100%"
-       height="100%">
-       </iframe>
+      <iframe src="https://yandex.ru/map-widget/v2/?um=constructor%3A515a61d0ed74da730e5f535e5e0f0ea28d2a2ca4200b289edeee312bfd959c5a&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
     </section>
   </div>
 </template>
