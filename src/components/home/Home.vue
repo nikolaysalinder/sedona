@@ -79,12 +79,13 @@
       <p class="hotels-text">Укажите предполaгаемые даты поездки,<br>
       и мы покажем вам лучшие предложения гостиниц в седоне</p>
       <button
-      class="btn btn-hotels">Поиск гостиницы в седоне
+      class="btn btn-hotels">
+        Поиск гостиницы в седоне
       </button>
     </section>
     <section id="map">
       <app-hotel-search></app-hotel-search>
-      <iframe src="https://yandex.ru/map-widget/v2/?um=constructor%3A515a61d0ed74da730e5f535e5e0f0ea28d2a2ca4200b289edeee312bfd959c5a&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A515a61d0ed74da730e5f535e5e0f0ea28d2a2ca4200b289edeee312bfd959c5a&amp;source=constructor" width="100%" height="100%" frameborder="1"></iframe>
     </section>
   </div>
 </template>

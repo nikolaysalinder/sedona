@@ -9,12 +9,14 @@ import Home from './components/home/Home';
 import HotelSearch from './components/home/HotelSearch';
 import Footer from './components/Footer';
 import Hotels from './components/hotels/Hotels';
+import HotelsItem from './components/hotels/HotelsItem';
 
 Vue.component('app-header', Header);
 Vue.component('app-home', Home);
 Vue.component('app-hotel-search', HotelSearch);
 Vue.component('app-footer', Footer);
 Vue.component('app-hotels', Hotels);
+Vue.component('app-hotels-item', HotelsItem);
 
 Vue.config.productionTip = false;
 
