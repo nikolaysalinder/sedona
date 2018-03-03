@@ -125,7 +125,7 @@ export default {
 <style>
 .hotels .filters {
   min-height: 217px;
-  background: #3a7c90 url('./../../assets/hotels-bg.jpg');
+  background-color: #3a7c90;
   color: #fff;
   font-weight: normal;
   display: flex;
