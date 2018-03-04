@@ -310,13 +310,13 @@ input[type="checkbox"]:checked+.checkbox-indicator {
 
 .btn-transparent:hover {
   color: #000000;
-
   background: #ffffff;
 }
 .sort {
   display: flex;
   padding-top: 2.3%;
   padding-left: 6%;
+  padding-right: 6%;
   padding-bottom: 2.5%;
   align-items: baseline;
   border-bottom: 1px solid #ccc;
@@ -342,6 +342,7 @@ input[type="checkbox"]:checked+.checkbox-indicator {
 }
 .sort ul button {
   margin: 0;
+  display: block;
   font: inherit;
   color: #cbcbcb;
   font-weight: normal;

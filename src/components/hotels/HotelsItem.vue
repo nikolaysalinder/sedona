@@ -10,25 +10,32 @@
         alt="#"
         class="hotel-photo">
       </figure>
-      <div class="hotel-description">
+      <div class="hotel-description-wrapper">
+        <div class="hotel-description">
         <h2 class="hotel-title">{{ hotel.title }}</h2>
         <div class="hotel-type-wrapper">
           <p class="hotel-type">{{ hotel.type }}</p>
-          <a href="#" class="hotel-info">Подробнее</a>
+          <p class="hotel-price">От {{ hotel.price }} р</p>
         </div>
         <div class="hotel-price-wrapper">
-          <p class="hotel-price">От {{ hotel.price }} р</p>
+          <a href="#" class="hotel-info">Подробнее</a>
           <a href="#" class="hotel-reserve">Забронировать</a>
         </div>
-      </div>
-      <div class="rating">
-        <ul>
-          <li
-          v-for="star in hotel.stars"
-          :key="star"
-          class="stars"></li>
-        </ul>
-        <p>Рейтинг: {{ hotel.rating }}</p>
+        </div>
+        <div class="rating">
+          <ul>
+            <li
+            v-for="star in hotel.stars"
+            :key="star"
+            class="stars">
+              <img
+              src="./../../assets/star.png"
+              alt="stars"
+              class="img-star">
+            </li>
+          </ul>
+          <p>Рейтинг: {{ hotel.rating }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -52,7 +59,7 @@ export default {
 .result-item {
   width: 100%;
   margin: 0;
-  padding: 2.5% 6%;
+  padding: 2.48% 6%;
   box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
@@ -62,17 +69,24 @@ export default {
   display: block;
   margin: 0;
   padding: 0;
-  width: 136px;
-  height: 90px;
+  width: 14.7%;
 }
 .result-item .hotel-photo {
   margin: 0;
   padding: 0;
+  width: 100%;
+}
+.hotel-description-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 .hotel-description {
   width: 40%;
-  box-sizing: border-box;
-  padding-left: 2.7%;
+  padding-left: 3.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .hotel-description .hotel-title {
   margin: 0;
@@ -80,39 +94,20 @@ export default {
   font-size: 1.34em;
   font-weight: 600;
   line-height: 0.8em;
-}
-.hotel-description .hotel-type {
-  display: block;
-  font-weight: normal;
-  font-size: 0.89em;
-  line-height: 0.9em;
-}
-.hotel-description .hotel-price {
-  font-weight: normal;
-  font-size: 0.89em;
-  line-height: 0.9em;
+  text-align: left;
 }
 .hotel-description .hotel-type-wrapper {
-  width: 28.6%;
-  height: 80%;
-  margin-top: 0.21%;
-  margin-right: 0.7%;
-  float: left;
+  display: flex;
+  align-items: baseline;
+  font-weight: normal;
+  font-size: 0.89em;
+  justify-content: space-between;
 }
 .hotel-description .hotel-price-wrapper {
-  width: 39%;
-  height: 80%;
-  margin-top: 0.21%;
-  margin-right: 0.7%;
-  float: left;
+  display: flex;
 }
 .hotel-description .hotel-info {
-  display: block;
-  width: 80%;
-  margin-top: 19px;
-  margin-left: 0.8%;
-  padding: 4px 10px;
-  text-align: center;
+  padding: 1% 4.5%;
   text-decoration: none;
   background: #81B3D1;
   color: #fff;
@@ -120,19 +115,15 @@ export default {
 }
 .hotel-description .hotel-reserve {
   display: block;
-  width: 120px;
-  margin-top: 19px;
-  margin-left: 0.9%;
-  padding: 4px 12px;
-  text-align: center;
+  padding: 1% 4.7%;
+  margin-left: 1.7%;
   text-decoration: none;
-  background: #746153;
   color: #fff;
   font-size: 0.87em;
+  background: #746153;
 }
 .rating {
-  margin-left: 37%;
-  width: 10.5%;
+  width: 12%;
   position: relative;
   padding: 0;
 }
@@ -145,13 +136,15 @@ export default {
   list-style: none;
   display: flex;
   flex-direction: row-reverse;
+  height: 100%;
+  width: 100%;
 }
 .rating li {
-  width: 23px;
-  height: 20px;
-  background: url('./../../assets/star.png');
-  background-repeat: no-repeat;
-  background-position: 4px -1px;
+  width: 20%;
+  height: 20%;
+}
+.rating .img-star {
+  width: 100%;
 }
 .rating p {
   display: block;
