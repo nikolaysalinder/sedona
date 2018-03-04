@@ -21,11 +21,7 @@ export default {
 --brown: #766357;
 --gray: #666666;*/
 /*стили для разработки*/
-/*a, div, li, nav, ul, header,
-footer, figure, form,
-label, h1, h2, p, fieldset, button, input, section {
-  outline: 1px solid green;
-}*/
+/*n*/
 /*стили для разработки*/
 body {
   margin: 0;
