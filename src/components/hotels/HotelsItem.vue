@@ -150,9 +150,7 @@ export default {
   display: block;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  padding-top: 3.6%;
-  padding-bottom: 3.6%;
+  padding: 3.6% 13%;
   margin: 0;
   font-size: 0.86em;
   font-weight: normal;
