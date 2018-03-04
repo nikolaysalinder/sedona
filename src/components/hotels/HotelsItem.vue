@@ -17,7 +17,7 @@
           <p class="hotel-type">{{ hotel.type }}</p>
           <p class="hotel-price">От {{ hotel.price }} р</p>
         </div>
-        <div class="hotel-price-wrapper">
+        <div class="hotel-info-wrapper">
           <a href="#" class="hotel-info">Подробнее</a>
           <a href="#" class="hotel-reserve">Забронировать</a>
         </div>
@@ -101,12 +101,18 @@ export default {
   align-items: baseline;
   font-weight: normal;
   font-size: 0.89em;
-  justify-content: space-between;
 }
-.hotel-description .hotel-price-wrapper {
+.hotel-description .hotel-info-wrapper {
   display: flex;
 }
+.hotel-description .hotel-type {
+  width: 110px;
+}
+.hotel-description .hotel-price {
+  margin-left: 1.5%;
+}
 .hotel-description .hotel-info {
+  display: block;
   padding: 1% 4.5%;
   text-decoration: none;
   background: #81B3D1;
