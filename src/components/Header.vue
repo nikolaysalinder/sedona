@@ -59,6 +59,16 @@ export default {
   text-decoration: none;
   color: #000;
 }
+.main-nav-item a:hover {
+  color: #81b3d2;
+  transition: color ease .5s;
+}
+.main-nav-item a:active {
+  color: #cdcdcd;
+}
+.main-nav-item.router-link-exact-active a{
+  color: #766357;
+}
 .main-nav-item:nth-child(3) {
   margin: 0;
   padding: 0;

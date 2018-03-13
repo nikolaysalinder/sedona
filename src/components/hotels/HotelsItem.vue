@@ -34,7 +34,7 @@
               class="img-star">
             </li>
           </ul>
-          <p>Рейтинг: {{ hotel.rating }}</p>
+          <span>Рейтинг: {{ hotel.rating }}</span>
         </div>
       </div>
     </div>
@@ -56,8 +56,16 @@ export default {
 </script>
 
 <style>
+/*стили для разработки*/
+a, div, li, nav, ul, header,
+footer, figure, form,
+label, h1, h2, p, fieldset, button, input, section {
+  outline: 1px solid green;
+}
+/*стили для разработки*/
 .result-item {
   width: 100%;
+  height: 150px;
   margin: 0;
   padding: 2.48% 6%;
   box-sizing: border-box;
@@ -69,7 +77,8 @@ export default {
   display: block;
   margin: 0;
   padding: 0;
-  width: 14.7%;
+  width: 136px;
+  height: 91px;
 }
 .result-item .hotel-photo {
   margin: 0;
@@ -78,11 +87,12 @@ export default {
 }
 .hotel-description-wrapper {
   display: flex;
-  width: 100%;
+  width: 87.6%;
+  height: 90px;
   justify-content: space-between;
 }
 .hotel-description {
-  width: 40%;
+  width: 70%;
   padding-left: 3.3%;
   display: flex;
   flex-direction: column;
@@ -106,14 +116,16 @@ export default {
   display: flex;
 }
 .hotel-description .hotel-type {
-  width: 110px;
+  text-align: left;
+  width: 105px;
 }
 .hotel-description .hotel-price {
   margin-left: 1.5%;
+  text-align: left;
 }
 .hotel-description .hotel-info {
   display: block;
-  padding: 1% 4.5%;
+  padding: 0.6% 2.63%;
   text-decoration: none;
   background: #81B3D1;
   color: #fff;
@@ -121,15 +133,15 @@ export default {
 }
 .hotel-description .hotel-reserve {
   display: block;
-  padding: 1% 4.7%;
-  margin-left: 1.7%;
+  padding: 0.6% 2.67%;
+  margin-left: 1%;
   text-decoration: none;
   color: #fff;
   font-size: 0.87em;
   background: #746153;
 }
 .rating {
-  width: 12%;
+  width: 109px;
   position: relative;
   padding: 0;
 }
@@ -146,17 +158,22 @@ export default {
   width: 100%;
 }
 .rating li {
-  width: 20%;
-  height: 20%;
+  width: 19px;
+  height: 19px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 .rating .img-star {
-  width: 100%;
+  width: 19px;
 }
-.rating p {
+.rating span {
   display: block;
   position: absolute;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
   bottom: 0;
-  padding: 3.6% 13%;
+  padding: ;
   margin: 0;
   font-size: 0.86em;
   font-weight: normal;
