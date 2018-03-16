@@ -57,11 +57,11 @@ export default {
 
 <style>
 /*стили для разработки*/
-a, div, li, nav, ul, header,
+/*a, div, li, nav, ul, header,
 footer, figure, form,
 label, h1, h2, p, fieldset, button, input, section {
   outline: 1px solid green;
-}
+}*/
 /*стили для разработки*/
 .result-item {
   width: 100%;

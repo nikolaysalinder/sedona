@@ -79,12 +79,15 @@
       <p class="hotels-text">Укажите предполaгаемые даты поездки,<br>
       и мы покажем вам лучшие предложения гостиниц в седоне</p>
       <button
-      class="btn btn-hotels">
+      class="btn btn-hotels"
+      @click="showSearchForm = !showSearchForm">
         Поиск гостиницы в седоне
       </button>
     </section>
     <section id="map">
-      <app-hotel-search></app-hotel-search>
+      <app-hotel-search
+      :showSearchForm="showSearchForm"
+      ></app-hotel-search>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18052166944!2d-111.83024387443771!3d34.85437335638643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ+86336%2C+USA!5e0!3m2!1sen!2sru!4v1521208431393" width="100%" height="100%" frameborder="1" style="border:0" allowfullscreen></iframe>
     </section>
   </div>
@@ -95,6 +98,7 @@ export default {
   name: 'Home',
   data() {
     return {
+      showSearchForm: true,
     };
   },
 };
@@ -151,6 +155,7 @@ export default {
   width: 33.33333%;
   text-align: center;
   text-transform: uppercase;
+  z-index: 3;
 }
 .feature-item h2 {
   text-transform: uppercase;
@@ -210,12 +215,15 @@ export default {
 }
 .features-row {
   display: flex;
-  background: #eee;
+  background-color: #eee;
   height: 255px;
+  z-index: 3;
 }
 .hotels {
   text-align: center;
   position: relative;
+  z-index: 2;
+  background-color: #fff;
 }
 .hotels-title {
   margin-top: 4.2%;
@@ -256,4 +264,5 @@ export default {
 #map iframe {
   border: none;
 }
+
 </style>
