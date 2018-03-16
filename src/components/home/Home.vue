@@ -85,7 +85,7 @@
     </section>
     <section id="map">
       <app-hotel-search></app-hotel-search>
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A515a61d0ed74da730e5f535e5e0f0ea28d2a2ca4200b289edeee312bfd959c5a&amp;source=constructor" width="100%" height="100%" frameborder="1"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18052166944!2d-111.83024387443771!3d34.85437335638643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ+86336%2C+USA!5e0!3m2!1sen!2sru!4v1521208431393" width="100%" height="100%" frameborder="1" style="border:0" allowfullscreen></iframe>
     </section>
   </div>
 </template>

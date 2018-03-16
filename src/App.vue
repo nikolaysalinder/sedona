@@ -42,4 +42,9 @@ body {
   background-color: #fefefe;
   box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.5);
 }
+@media screen and (max-width: 768px) {
+  #app {
+    width: 100%;
+  }
+}
 </style>
