@@ -91,7 +91,7 @@ export default {
   top: 0;
   left: 50%;
   margin-left: -23.5%;
-  z-index: 1;
+  z-index: 0;
 }
 .search-form ul,
 .search-form li {

@@ -217,23 +217,26 @@ export default {
   display: flex;
   background-color: #eee;
   height: 255px;
-  z-index: 3;
+  position: relative;
+  z-index: 999;
 }
 .hotels {
   text-align: center;
   position: relative;
-  z-index: 2;
+  z-index: 999;
   background-color: #fff;
+  outline: 1px solid green;
+  padding-top: 4.1%;
 }
 .hotels-title {
-  margin-top: 4.2%;
   font-size: 1.88em;
   margin-bottom: 0;
+  margin-top: 0;
 }
 .hotels-text {
   font-size: 0.88em;
   font-weight: normal;
-  margin-top: 1.9%;
+  padding-top: 0.8%;
   line-height: 1.7em;
 }
 .btn-hotels {
