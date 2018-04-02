@@ -117,7 +117,11 @@ export default {
   name: 'Hotels',
   data() {
     return {
+      filterBy: 'price',
+      filterOrder: 'decrease',
     };
+  },
+  methods: {
   },
 };
 </script>
@@ -130,6 +134,7 @@ export default {
   font-weight: normal;
   display: flex;
   width: 100%;
+  background-size: cover;
 }
 .hotels .filters-form {
   display: flex;

@@ -145,6 +145,7 @@ export default {
   color: #fff;
 }
 .first-feature img {
+  width: 100%;
   margin-top: -10%;
 }
 .feature-img-mask {
@@ -218,14 +219,13 @@ export default {
   background-color: #eee;
   height: 255px;
   position: relative;
-  z-index: 999;
+  z-index: 2;
 }
 .hotels {
   text-align: center;
   position: relative;
-  z-index: 999;
+  z-index: 2;
   background-color: #fff;
-  outline: 1px solid green;
   padding-top: 4.1%;
 }
 .hotels-title {

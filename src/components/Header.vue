@@ -77,7 +77,7 @@ export default {
 }
 .main-nav-item:nth-child(3) a {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   left: 0;
   right: 0;
   top: -29px;
