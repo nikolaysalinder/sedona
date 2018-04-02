@@ -89,7 +89,7 @@
       <div class="sort">
         <b>Найдено: 3</b>
         <span>Cортировка:</span>
-        <ul>
+        <ul class="sorted-by">
           <li>
             <button>По цене</button>
           </li>
@@ -99,11 +99,13 @@
           <li>
             <button>По рейтингу</button>
           </li>
+        </ul>
+        <ul class="order">
           <li>
-            <button>По убыванию</button>
+            <button class="decrease">По убыванию</button>
           </li>
           <li>
-            <button class="active">По возрастанию</button>
+            <button class="increase">По возрастанию</button>
           </li>
         </ul>
       </div>

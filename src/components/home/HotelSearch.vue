@@ -192,14 +192,14 @@ li.child-counter label {
   background-color: #81b3d2;
 }
 .slide-enter {
-  transform: translateY(-400px);
+  transform: translateY(-100%);
 }
 .slide-enter-active {
   transition: all 1s;
   transition-timing-function: ease-in-out;
 }
 .slide-leave-active {
-  transform: translateY(-400px);
+  transform: translateY(-100%);
   transition: all 1s;
   transition-timing-function: ease-in-out;
 }

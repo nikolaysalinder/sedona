@@ -107,6 +107,7 @@ export default {
 <style>
 .welcome {
   background-position: 50% 29%;
+  background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
@@ -213,6 +214,7 @@ export default {
 }
 .second-feature img {
   margin-top: -75px;
+  width: 100%;
 }
 .features-row {
   display: flex;
