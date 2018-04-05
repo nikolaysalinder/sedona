@@ -25,6 +25,9 @@ module.exports = {
   },
   // add your custom rules here
   rules: {
+    // Чтобы не было проблем на разных операционках
+    // c CRLF(windows) И LF(unix)
+    "linebreak-style": 0,
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       js: 'never',
