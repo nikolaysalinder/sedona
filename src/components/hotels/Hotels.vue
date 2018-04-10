@@ -102,14 +102,24 @@
         </ul>
         <ul class="order">
           <li>
-            <button class="decrease">По убыванию</button>
+            <button
+            @click="filterOrder = 'decrease'"
+            class="increase"
+            :class="{ 'active' : filterOrder === 'decrease' }"
+            >По убыванию</button>
           </li>
           <li>
-            <button class="increase">По возрастанию</button>
+            <button
+            @click="filterOrder = 'increase'"
+            class="decrease"
+            :class="{ 'active' : filterOrder === 'increase' }"
+            >По возрастанию</button>
           </li>
         </ul>
       </div>
-      <app-hotels-item></app-hotels-item>
+      <app-hotels-item
+      :filterOrder='filterOrder'
+      :filterBy='filterBy'></app-hotels-item>
     </section>
   </div>
 </template>
@@ -200,7 +210,7 @@ input[type="checkbox"]:checked+.checkbox-indicator {
 }
 .filter-range {
   width: 30%;
-  margin-left: 21.9%
+  margin-left: 21.9%;
 }
 .filter-range-title {
   font-size: 1.03em;
@@ -215,20 +225,16 @@ input[type="checkbox"]:checked+.checkbox-indicator {
   border-radius: 2px;
   display: flex;
 }
-
 .price-controls::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 2px;
   height: 22px;
-
   background: #ffffff;
   transform: translate(-50%, -50%);
 }
-
 .price-controls label {
   display: flex;
   width: 50%;
@@ -244,9 +250,8 @@ input[type="checkbox"]:checked+.checkbox-indicator {
 }
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 77%
+  width: 77%;
 }
-
 .price-controls input {
   margin: 0;
   color: inherit;
@@ -254,52 +259,39 @@ input[type="checkbox"]:checked+.checkbox-indicator {
   background: none;
   border: none;
 }
-
 .range-controls {
   position: relative;
-
   margin-bottom: 32px;
 }
-
 .range-controls .scale {
   height: 2px;
-
   background: rgba(255, 255, 255, 0.3);
 }
-
 .range-controls .bar {
   width: 80%;
   height: 2px;
-
   background: #ffffff;
 }
-
 .range-toggle {
   position: absolute;
   top: -9px;
-
   width: 4px;
   height: 4px;
-
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
-
 .range-toggle:hover {
   background: #1c4f80;
 }
-
 .range-toggle-min {
   left: 0;
 }
-
 .range-toggle-max {
   left: 80%;
 }
-
 .btn-transparent {
   display: block;
   margin-left: 26.3%;
@@ -308,13 +300,11 @@ input[type="checkbox"]:checked+.checkbox-indicator {
   line-height: 14px;
   color: #ffffff;
   text-transform: uppercase;
-
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
 }
-
 .btn-transparent:hover {
   color: #000000;
   background: #ffffff;
@@ -330,6 +320,7 @@ input[type="checkbox"]:checked+.checkbox-indicator {
 }
 .sort b {
   font-size: 1.3em;
+  white-space: nowrap;
 }
 .sort span {
   margin-left: 4.3%;
@@ -364,59 +355,69 @@ input[type="checkbox"]:checked+.checkbox-indicator {
 .sort li {
   margin-right: 2.5%;
 }
-.sort li:nth-of-type(4){
-  margin-left: 57.7%;
-  margin-right: 1.06%;
-  font-size: 0;
+ul.order {
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+}
+.order .increase,
+.order .decrease {
+  text-indent: -9999px;
+  margin-right: 0;
+  width: 20px;
+}
+.order button {
   display: block;
-  width: 15px;
+  font: inherit;
+  background: black;
 }
-.sort li:nth-of-type(4) button {
-  height: 100%;
-  width: 100%;
-  position: relative;
+.order .increase {
+  background: url('./../../assets/icon-arrow-down.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
 }
- .sort li:nth-of-type(4) button::after {
-  content: '';
-  position: absolute;
-  left: -19%;
-  top: -20%;
-  width: 0;
-  height: 0;
-  background: transparent;
-  border: 10px solid #cbcbcb;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-top-color: transparent;
- }
-.sort li:nth-of-type(5) {
-  font-size: 0;
-  display: block;
-  width: 15px;
+.order .increase:hover {
+  background: url('./../../assets/icon-arrow-down-hover.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
 }
-.sort li:nth-of-type(5) button {
-  height: 100%;
-  width: 100%;
-  position: relative;
+.order .increase:active {
+  background: url('./../../assets/icon-arrow-down-active.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
 }
-.sort li:nth-of-type(5) button::after {
-  content: '';
-  position: absolute;
-  left: -20%;
-  top: 20%;
-  width: 0;
-  height: 0;
-  background: transparent;
-  border: 10px solid #cbcbcb;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
- }
- .sort li:nth-of-type(5) button.active::after{
-  border: 10px solid #81b3d2;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
- }
+.order .increase.active {
+   background: url('./../../assets/icon-arrow-down-active.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+.order .decrease {
+  background: url('./../../assets/icon-arrow-up.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+.order .decrease:hover {
+  background: url('./../../assets/icon-arrow-up-hover.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+.order .decrease:active {
+  background: url('./../../assets/icon-arrow-up-active.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+.order .decrease.active {
+  background: url('./../../assets/icon-arrow-up-active.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
 </style>
 

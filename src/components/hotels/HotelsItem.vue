@@ -2,7 +2,7 @@
   <div>
     <div
     class="result-item"
-    v-for="hotel in hotels"
+    v-for="hotel in sortedList"
     :key="hotel.title">
       <figure>
         <img
@@ -43,6 +43,7 @@
 
 <script>
 export default {
+  props: ['filterOrder', 'filterBy'],
   data() {
     return {
       hotels: [
@@ -51,6 +52,43 @@ export default {
         { title: 'Villas at Poco Diablo', type: 'апартаменты', price: '2000', stars: 2, rating: 9.2, imgSrc: './static/img/hotel-3.jpg' },
       ],
     };
+  },
+  methods: {
+    sortedList() {
+      switch (this.filterBy) {
+        case 'title': return this.hotels.sort((hotel1, hotel2) => {
+          if (this.filerOrder === 'increase') {
+            return hotel1.title.toLowerCase() > hotel2.title.toLowerCase() ? 1 : -1;
+          }
+          return hotel1.type.toLowerCase() < hotel2.type.toLowerCase() ? 1 : -1;
+        });
+        case 'type': return this.hotels.sort((hotel1, hotel2) => {
+          if (this.filerOrder === 'increase') {
+            return hotel1.type.toLowerCase() > hotel2.type.toLowerCase() ? 1 : -1;
+          }
+          return hotel1.type.toLowerCase() < hotel2.type.toLowerCase() ? 1 : -1;
+        });
+        case 'price': return this.hotels.sort((hotel1, hotel2) => {
+          if (this.filerOrder === 'increase') {
+            return hotel1.price.toLowerCase() > hotel2.price.toLowerCase() ? 1 : -1;
+          }
+          return hotel1.price.toLowerCase() < hotel2.price.toLowerCase() ? 1 : -1;
+        });
+        case 'stars': return this.hotels.sort((hotel1, hotel2) => {
+          if (this.filterOrder === 'increase') {
+            return hotel1.stars.toLowerCase() > hotel2.stars.toLowerCase() ? 1 : -1;
+          }
+          return hotel1.stars.toLowerCase() < hotel2.stars.toLowerCase() ? 1 : -1;
+        });
+        case 'rating': return this.hotels.sort((hotel1, hotel2) => {
+          if (this.filterOrder === 'increase') {
+            return hotel1.rating.toLowerCase() > hotel2.rating.toLowerCase() ? 1 : -1;
+          }
+          return hotel1.rating.toLowerCase() < hotel2.rating.toLowerCase() ? 1 : -1;
+        });
+        default: return this.hotels;
+      }
+    },
   },
 };
 </script>
@@ -87,7 +125,7 @@ label, h1, h2, p, fieldset, button, input, section {
 }
 .hotel-description-wrapper {
   display: flex;
-  width: 87.6%;
+  width: 91.3%;
   height: 90px;
   justify-content: space-between;
 }
