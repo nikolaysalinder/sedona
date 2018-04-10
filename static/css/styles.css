@@ -4,3 +4,51 @@
 .hotels .filters {
   background: #3a7c90 url('../img/hotels-bg.jpg');
 }
+.order .increase {
+  background: url('../img/icon-arrow-down.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+.order .increase:hover {
+  background: url('../img/icon-arrow-down-hover.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+.order .increase:active {
+  background: url('../img/icon-arrow-down-active.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+.order .increase.active {
+   background: url('../img/icon-arrow-down-active.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+.order .decrease {
+  background: url('../img/icon-arrow-up.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+.order .decrease:hover {
+  background: url('../img/icon-arrow-up-hover.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+.order .decrease:active {
+  background: url('../img/icon-arrow-up-active.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+.order .decrease.active {
+  background: url('../img/icon-arrow-up-active.png');
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
