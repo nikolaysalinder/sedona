@@ -371,53 +371,5 @@ ul.order {
   font: inherit;
   background: black;
 }
-.order .increase {
-  background: url('./../../assets/icon-arrow-down.png');
-  background-size: 14px 14px;
-  background-repeat: no-repeat;
-  background-position: 3px 3px;
-}
-.order .increase:hover {
-  background: url('./../../assets/icon-arrow-down-hover.png');
-  background-size: 14px 14px;
-  background-repeat: no-repeat;
-  background-position: 3px 3px;
-}
-.order .increase:active {
-  background: url('./../../assets/icon-arrow-down-active.png');
-  background-size: 14px 14px;
-  background-repeat: no-repeat;
-  background-position: 3px 3px;
-}
-.order .increase.active {
-   background: url('./../../assets/icon-arrow-down-active.png');
-  background-size: 14px 14px;
-  background-repeat: no-repeat;
-  background-position: 3px 3px;
-}
-.order .decrease {
-  background: url('./../../assets/icon-arrow-up.png');
-  background-size: 14px 14px;
-  background-repeat: no-repeat;
-  background-position: 3px 3px;
-}
-.order .decrease:hover {
-  background: url('./../../assets/icon-arrow-up-hover.png');
-  background-size: 14px 14px;
-  background-repeat: no-repeat;
-  background-position: 3px 3px;
-}
-.order .decrease:active {
-  background: url('./../../assets/icon-arrow-up-active.png');
-  background-size: 14px 14px;
-  background-repeat: no-repeat;
-  background-position: 3px 3px;
-}
-.order .decrease.active {
-  background: url('./../../assets/icon-arrow-up-active.png');
-  background-size: 14px 14px;
-  background-repeat: no-repeat;
-  background-position: 3px 3px;
-}
 </style>
 
