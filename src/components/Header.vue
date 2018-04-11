@@ -29,7 +29,7 @@ export default {
     return {
       links: [
         { path: '1', text: 'Информация' },
-        { path: '2', text: 'Фото и Видео' },
+        { path: '/media', text: 'Фото и Видео' },
         { path: '/', text: 'Главная', imgSrc: '/static/img/top-logo.png', logo: 'true' },
         { path: '4', text: 'Карта штата' },
         { path: '/hotels', text: 'Гостиницы' },

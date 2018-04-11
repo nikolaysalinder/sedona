@@ -62,17 +62,21 @@
             type="text"
             name="min-price"
             class="min-price"
-            v-model="minPrice">
+            v-model="options.value[0]">
           </label>
           <label>до
             <input
             type="text"
             name="max-price"
             class="max-price"
-            v-model="maxPrice">
+            v-model="options.value[1]">
           </label>
         </div>
-        <div class="range-controls">
+        <vue-slider
+        ref="slider"
+        v-model="options.value"
+        v-bind="options"></vue-slider>
+        <!-- <div class="range-controls">
           <div class="scale">
             <div
             class="bar"
@@ -84,7 +88,7 @@
           <div
           class="range-toggle"
           style="rangeToggleMax"></div>
-        </div>
+        </div> -->
         <button
         class="btn-transparent"
         type="submit">Показать</button>
@@ -140,12 +144,35 @@
 </template>
 
 <script>
+import vueSlider from 'vue-slider-component';
+
 export default {
   name: 'Hotels',
+  components: {
+    vueSlider,
+  },
   data() {
     return {
+      options: {
+        width: '100%',
+        show: true,
+        value: [2000, 5000],
+        min: 0,
+        max: 10000,
+        disabled: false,
+        tooltip: false,
+        sliderStyle: {
+          width: '4px',
+          height: '4px',
+          background: '#ababab',
+          border: '8px solid #fff',
+        },
+        processStyle: {
+          background: '#82b3d3',
+        },
+      },
       minPrice: 0,
-      maxPrice: 5000,
+      maxPrice: 10000,
       currentMinPrice: 1000,
       currentMaxPrice: 4000,
       filterBy: 'price',
@@ -329,6 +356,9 @@ input[type="checkbox"]:checked+.checkbox-indicator {
 }
 .range-toggle:hover {
   background: #1c4f80;
+}
+div.vue-slider-dot:hover {
+  background: #000;
 }
 /*.range-toggle-min {
   left: 10%;
