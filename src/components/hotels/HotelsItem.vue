@@ -53,38 +53,30 @@ export default {
       ],
     };
   },
-  methods: {
+  computed: {
     sortedList() {
-      switch (this.filterBy) {
-        case 'title': return this.hotels.sort((hotel1, hotel2) => {
-          if (this.filerOrder === 'increase') {
-            return hotel1.title.toLowerCase() > hotel2.title.toLowerCase() ? 1 : -1;
+      // eslint-disable-next-line
+      switch (this.filterBy) {        
+        // eslint-disable-next-line
+        case 'price': return this.hotels.sort((a, b) => {
+          if (this.filterOrder === 'decrease') {
+            return a.price - b.price;
           }
-          return hotel1.type.toLowerCase() < hotel2.type.toLowerCase() ? 1 : -1;
+          return 1;
         });
-        case 'type': return this.hotels.sort((hotel1, hotel2) => {
-          if (this.filerOrder === 'increase') {
-            return hotel1.type.toLowerCase() > hotel2.type.toLowerCase() ? 1 : -1;
+        // eslint-disable-next-line
+        case 'type': return this.hotels.sort((a, b) => {
+          if (this.filterOrder === 'decrease') {
+            return a.type > b.type ? 1 : -1;
           }
-          return hotel1.type.toLowerCase() < hotel2.type.toLowerCase() ? 1 : -1;
+          return 1;
         });
-        case 'price': return this.hotels.sort((hotel1, hotel2) => {
-          if (this.filerOrder === 'increase') {
-            return hotel1.price.toLowerCase() > hotel2.price.toLowerCase() ? 1 : -1;
+        // eslint-disable-next-line
+        case 'rating': return this.hotels.sort((a, b) => {
+          if (this.filterOrder === 'decrease') {
+            return a.rating - b.rating;
           }
-          return hotel1.price.toLowerCase() < hotel2.price.toLowerCase() ? 1 : -1;
-        });
-        case 'stars': return this.hotels.sort((hotel1, hotel2) => {
-          if (this.filterOrder === 'increase') {
-            return hotel1.stars.toLowerCase() > hotel2.stars.toLowerCase() ? 1 : -1;
-          }
-          return hotel1.stars.toLowerCase() < hotel2.stars.toLowerCase() ? 1 : -1;
-        });
-        case 'rating': return this.hotels.sort((hotel1, hotel2) => {
-          if (this.filterOrder === 'increase') {
-            return hotel1.rating.toLowerCase() > hotel2.rating.toLowerCase() ? 1 : -1;
-          }
-          return hotel1.rating.toLowerCase() < hotel2.rating.toLowerCase() ? 1 : -1;
+          return 1;
         });
         default: return this.hotels;
       }
@@ -158,12 +150,12 @@ label, h1, h2, p, fieldset, button, input, section {
   width: 105px;
 }
 .hotel-description .hotel-price {
-  margin-left: 1.5%;
+  margin-left: 6px;
   text-align: left;
 }
 .hotel-description .hotel-info {
   display: block;
-  padding: 0.6% 2.63%;
+  padding: 3px 14px;
   text-decoration: none;
   background: #81B3D1;
   color: #fff;
@@ -171,7 +163,7 @@ label, h1, h2, p, fieldset, button, input, section {
 }
 .hotel-description .hotel-reserve {
   display: block;
-  padding: 0.6% 2.67%;
+  padding: 3px 14px;
   margin-left: 1%;
   text-decoration: none;
   color: #fff;

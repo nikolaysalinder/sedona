@@ -218,5 +218,10 @@ li.child-counter label {
     height: 60px;
     width: 90px;
   }
+  .first-feature img,
+  .second-feature img {
+    margin-top: 0;
+    height: 100%;
+  }
 }
 </style>

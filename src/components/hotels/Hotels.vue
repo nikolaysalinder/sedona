@@ -62,22 +62,28 @@
             type="text"
             name="min-price"
             class="min-price"
-            value="0">
+            v-model="minPrice">
           </label>
           <label>до
             <input
             type="text"
             name="max-price"
             class="max-price"
-            value="3000">
+            v-model="maxPrice">
           </label>
         </div>
         <div class="range-controls">
           <div class="scale">
-            <div class="bar"></div>
+            <div
+            class="bar"
+            :style="barStyle"></div>
           </div>
-          <div class="range-toggle range-toggle-min"></div>
-          <div class="range-toggle range-toggle-max"></div>
+          <div
+          class="range-toggle"
+          :style="rangeToggleMin"></div>
+          <div
+          class="range-toggle"
+          style="rangeToggleMax"></div>
         </div>
         <button
         class="btn-transparent"
@@ -91,13 +97,22 @@
         <span>Cортировка:</span>
         <ul class="sorted-by">
           <li>
-            <button>По цене</button>
+            <button
+            @click="filterBy = 'price'"
+            :class="{ 'active' : filterBy === 'price' }"
+            >По цене</button>
           </li>
           <li>
-            <button>По типу</button>
+            <button
+            @click="filterBy = 'type'"
+            :class="{ 'active' : filterBy === 'type' }"
+            >По типу</button>
           </li>
           <li>
-            <button>По рейтингу</button>
+            <button
+            @click="filterBy = 'rating'"
+            :class="{ 'active' : filterBy === 'rating' }"
+            >По рейтингу</button>
           </li>
         </ul>
         <ul class="order">
@@ -129,9 +144,37 @@ export default {
   name: 'Hotels',
   data() {
     return {
+      minPrice: 0,
+      maxPrice: 5000,
+      currentMinPrice: 1000,
+      currentMaxPrice: 4000,
       filterBy: 'price',
       filterOrder: 'decrease',
     };
+  },
+  computed: {
+    toggleMin() {
+      return `${(100 * this.minPrice) / this.maxPrice}%`;
+    },
+    toggleMax() {
+      return `${(100 * this.minPrice) / this.maxPrice}%`;
+    },
+    barStyle() {
+      return {
+        left: `${(100 * this.minPrice) / this.maxPrice}%`,
+        right: `${(100 * this.minPrice) / this.maxPrice}%`,
+      };
+    },
+    rangeToggleMin() {
+      return {
+        left: `${(100 * this.minPrice) / this.maxPrice}%`,
+      };
+    },
+    rangeToggleMax() {
+      return {
+        left: `${(100 * this.minPrice) / this.maxPrice}%`,
+      };
+    },
   },
   methods: {
   },
@@ -266,11 +309,12 @@ input[type="checkbox"]:checked+.checkbox-indicator {
 .range-controls .scale {
   height: 2px;
   background: rgba(255, 255, 255, 0.3);
+  position: relative;
 }
 .range-controls .bar {
-  width: 80%;
   height: 2px;
   background: #ffffff;
+  position: absolute;
 }
 .range-toggle {
   position: absolute;
@@ -286,12 +330,12 @@ input[type="checkbox"]:checked+.checkbox-indicator {
 .range-toggle:hover {
   background: #1c4f80;
 }
-.range-toggle-min {
-  left: 0;
+/*.range-toggle-min {
+  left: 10%;
 }
 .range-toggle-max {
   left: 80%;
-}
+}*/
 .btn-transparent {
   display: block;
   margin-left: 26.3%;
@@ -354,6 +398,16 @@ input[type="checkbox"]:checked+.checkbox-indicator {
 }
 .sort li {
   margin-right: 2.5%;
+}
+.sorted-by .active {
+  text-decoration: none;
+  color: #82b3d3;
+}
+.sorted-by button:hover {
+  color: #82b3d3;
+}
+.sorted-by button:active {
+  color: #282526;
 }
 ul.order {
   display: flex;
