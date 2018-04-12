@@ -166,6 +166,7 @@ export default {
           height: '4px',
           background: '#ababab',
           border: '8px solid #fff',
+          coursor: 'pointer',
         },
         processStyle: {
           background: '#82b3d3',
@@ -281,6 +282,7 @@ input[type="checkbox"]:checked+.checkbox-indicator {
 .filter-range {
   width: 30%;
   margin-left: 21.9%;
+  position: relative;
 }
 .filter-range-title {
   font-size: 1.03em;
@@ -354,21 +356,11 @@ input[type="checkbox"]:checked+.checkbox-indicator {
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
-.range-toggle:hover {
-  background: #1c4f80;
-}
-div.vue-slider-dot:hover {
-  background: #000;
-}
-/*.range-toggle-min {
-  left: 10%;
-}
-.range-toggle-max {
-  left: 80%;
-}*/
 .btn-transparent {
   display: block;
-  margin-left: 26.3%;
+  position: absolute;
+  right: 0;
+  margin-top: 5%;
   padding: 3% 9.4%;
   font-size: 0.9em;
   line-height: 14px;
