@@ -3,24 +3,24 @@
     <nav class="main-nav">
       <ul>
         <router-link
-          v-for="link in links"
-          :key="link.path"
-          :to="link.path"
-          tag="li"
-          class="main-nav-item"
-          exact>
-          <a>
-            {{ link.text }}
-            <img
-            v-if="link.logo"
-            src="./../assets/top-logo.png"
-            height="70"
-            width="138" alt="Главная">
-          </a>
-        </router-link>
-      </ul>
-    </nav>
-  </header>
+        v-for="link in links"
+        :key="link.ids"
+        :to="link.path"
+        tag="li"
+        class="main-nav-item"
+        exact>
+        <a :class="{ disabled: link.disabled }">
+          {{ link.text }}
+          <img
+          v-if="link.logo"
+          src="./../assets/top-logo.png"
+          height="70"
+          width="138" alt="Главная">
+        </a>
+      </router-link>
+    </ul>
+  </nav>
+</header>
 </template>
 
 <script>
@@ -28,11 +28,11 @@ export default {
   data() {
     return {
       links: [
-        { path: '1', text: 'Информация' },
-        { path: '/media', text: 'Фото и Видео' },
-        { path: '/', text: 'Главная', imgSrc: '/static/img/top-logo.png', logo: 'true' },
-        { path: '4', text: 'Карта штата' },
-        { path: '/hotels', text: 'Гостиницы' },
+        { ids: '1', path: '/', text: 'Информация' },
+        { ids: '2', path: '/media', text: 'Фото и Видео' },
+        { ids: '3', path: '/', text: 'Главная', imgSrc: '/static/img/top-logo.png', logo: 'true' },
+        { ids: '4', path: '4', text: 'Карта штата', disabled: true },
+        { ids: '5', path: '/hotels', text: 'Гостиницы' },
       ],
     };
   },
@@ -85,5 +85,9 @@ export default {
 .main-nav-item:nth-child(3) a img{
   width: 138px;
   height: auto;
+}
+.main-nav-item a.disabled{
+  color: rgba(118,99,87,0.3);
+  cursor: default;
 }
 </style>

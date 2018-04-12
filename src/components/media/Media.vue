@@ -10,9 +10,7 @@
         <img
         class="catalog-image"
         :src="photo.src"
-        alt="Фотографии седоны"
-        width="auto"
-        heigth="auto">
+        alt="Фотографии седоны">
         <p class="catalog-date">{{ photo.date }}</p>
         <p class="catalog-description">{{ photo.description }}</p>
       </div>
@@ -41,32 +39,33 @@ export default {
 <style>
 .media .catalog-items {
   position: relative;
-  clear: both;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 3px;
-  margin-bottom: 3px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .media .catalog-item {
   position: relative;
   border: 1px solid #ccc;
-  min-width: 0;
-  margin: 1px;
+  width: 33%;
+  min-height: 300px;
+  background: #ccc;
+  margin-bottom: 10px;
 }
 .media .catalog-image {
   width: 100%;
-  height: 100%;
+  height: 300px;
 }
 .media .catalog-date {
   position: absolute;
-  bottom: 3%;
+  bottom: 6%;
   left: 3%;
   color: #fff;
   text-shadow: 1px 1px 1px #ccc;
 }
 .media .catalog-description {
   position: absolute;
-  bottom: 0.4%;
+  top: 83%;
   right: 3%;
   color: #fff;
   text-shadow: 1px 1px 1px #ccc;
